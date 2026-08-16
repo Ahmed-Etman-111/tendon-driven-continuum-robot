@@ -69,12 +69,20 @@ Our team fully designed and manufactured the physical robot to validate our simu
 * Gazebo Harmonic
 
 ### Building the Workspace
+We recommend performing a clean build of the package to prevent any caching issues with the URDF or custom Python nodes.
+
 ```bash
+# 1. Create the workspace and clone the repository
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-# Clone this repository
-git clone https://github.com/Ahmed-Etman-111/tendon-driven-continuum-robot.git
+git clone [https://github.com/Ahmed-Etman-111/tendon-driven-continuum-robot.git](https://github.com/Ahmed-Etman-111/tendon-driven-continuum-robot.git)
+
+# 2. Navigate to the workspace root
 cd ~/ros2_ws
-# Build the package
-colcon build --symlink-install
+
+# 3. Clean previous builds for this specific package
+rm -rf build/tendon_continuum install/tendon_continuum
+
+# 4. Build the package and source the overlay
+colcon build --packages-select tendon_continuum
 source install/setup.bash
