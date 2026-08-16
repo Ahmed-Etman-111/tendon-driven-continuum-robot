@@ -15,27 +15,29 @@ This repository contains the software simulation, mathematical kinematics solver
   <img src="Images/IMG_20260627_190525.jpeg" width="45%" title="Hardware Prototype" />
 </p> 
 
-*<!-- Tip: Replace with your best Canva slide showing the whole project -->*
-
 ---
 
 ## 🎥 Visual Demonstrations
 
-*We built this system from the ground up, from the physical manufacturing to the physics engine.*
+*We built this system from the ground up, from the mechanical CAD design to the physical manufacturing and physics engine.*
 
-### 1. The Physical Hardware Prototype
+### 1. Fusion 360 CAD Design
+![Fusion 360 Assembly](Images/Prototype.png)
+*The complete mechanical assembly designed in Autodesk Fusion 360, detailing the 10-disk backbone, exact 5.0 mm tendon routing channels, and the actuation base prior to physical manufacturing.*
+
+### 2. The Physical Hardware Prototype
 ![Hardware Demo](images/hardware_prototype_bending.gif)
 *Our physical 10-disk prototype bending. The system uses a super-elastic Nitinol core and compressive springs, actuated by NEMA-17 stepper motors.*
 
-### 2. ROS 2 & Gazebo Digital Twin
+### 3. ROS 2 & Gazebo Digital Twin
 ![Gazebo Simulation](images/gazebo_simulation.gif)
 *Real-time simulation in Gazebo Harmonic, driven by our custom Inverse Kinematics solver. The digital twin bends identically to the physical hardware.*
 
-### 3. Interactive Operator Dashboard
+### 4. Interactive Operator Dashboard
 ![UI Dashboard](Images/Heidi%20hand.jpeg)
 *Our custom Tkinter GUI calculating discrete Constant Curvature tendon lengths (L1, L2, L3, L4) from Task-Space (XYZ) inputs.*
 
-### 4. RViz 2 Holographic Tracking
+### 5. RViz 2 Holographic Tracking
 ![RViz TF Tracking](images/rviz_tracking.gif)
 *Real-time validation of the continuum spline and tendon routing (5mm radius) using TF2 coordinate transformations.*
 
@@ -70,7 +72,7 @@ Our team fully designed and manufactured the physical robot to validate our simu
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
 # Clone this repository
-git clone [https://github.com/Ahmed-Etman-111/tendon-driven-continuum-robot.git](https://github.com/Ahmed-Etman-111/tendon-driven-continuum-robot.git)
+git clone https://github.com/Ahmed-Etman-111/tendon-driven-continuum-robot.git
 cd ~/ros2_ws
 # Build the package
 colcon build --symlink-install
