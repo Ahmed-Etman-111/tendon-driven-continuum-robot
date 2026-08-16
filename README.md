@@ -9,8 +9,10 @@ This repository contains the software simulation, mathematical kinematics solver
 
 **Funding & Support:** This project was developed with support from ITIDA's ITAC funding program (2025–2026).
 
-![System Overview](Images/gazebo_simulation_gui.png) 
-![System Overview](Images/Heidi hand.jpeg) 
+![System Overview]<p align="center">
+  <img src="Images/gazebo_simulation_gui.png" width="45%" title="System Overview" />
+  <img src="Images/Heidi%20hand.jpeg" width="45%" title="Hardware Prototype" />
+</p> 
 
 *<!-- Tip: Replace with your best Canva slide showing the whole project -->*
 
