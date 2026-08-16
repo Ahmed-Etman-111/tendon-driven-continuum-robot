@@ -5,7 +5,7 @@
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 
 ## Overview
-This repository contains the software simulation, mathematical kinematics solver, and hardware control architecture for a one-port tendon-driven continuum surgical robot. Developed as a graduation project by Team Four from the Systems and Biomedical Engineering department at Cairo University, this cyber-physical system bridges a physical nitinol-core prototype with a highly accurate digital twin.
+This repository contains the software simulation, mathematical kinematics solver, and hardware control architecture for a one-port tendon-driven continuum surgical robot. Developed as a graduation project by Team Four from the Systems and Biomedical Engineering department at Cairo University, this cyber-physical system bridges a physical prototype (designed with a specialized anti-twist backbone) with a highly accurate digital twin.
 
 **Funding & Support:** This project was developed with support from ITIDA's ITAC funding program (2025–2026).
 
@@ -31,13 +31,11 @@ This repository contains the software simulation, mathematical kinematics solver
 
 ### 1. Fusion 360 CAD Design
 ![Fusion 360 Assembly](Images/Prototype.png)
-
-
 *The complete mechanical assembly designed in Autodesk Fusion 360, detailing the 10-disk backbone, exact 5.0 mm tendon routing channels, and the actuation base prior to physical manufacturing.*
 
 ### 2. The Physical Hardware Prototype
 ![Hardware Demo](images/hardware_prototype_bending.gif)
-*Our physical 10-disk prototype bending. The system uses a super-elastic Nitinol core and compressive springs, actuated by NEMA-17 stepper motors.*
+*Our physical 10-disk prototype bending. The system uses 4 stainless steel rods to prevent twisting (torsional deformation) along with compressive springs, actuated by NEMA-17 stepper motors.*
 
 ### 3. ROS 2 & Gazebo Digital Twin (Anatomical Navigation)
 ![Gazebo Simulation](images/gazebo_simulation.gif)
@@ -45,8 +43,6 @@ This repository contains the software simulation, mathematical kinematics solver
 
 ### 4. Interactive Operator Dashboard
 ![UI Dashboard](Images/Heidi%20hand.jpeg)
-
-
 *Our custom Tkinter GUI calculating discrete Constant Curvature tendon lengths (L1, L2, L3, L4) from Task-Space (XYZ) inputs.*
 
 ### 5. RViz 2 Holographic Tracking
@@ -59,7 +55,7 @@ This repository contains the software simulation, mathematical kinematics solver
 
 ### 🛠️ Hardware (Physical Prototype)
 Our team fully designed and manufactured the physical robot to validate our simulation math:
-* **Backbone:** 10-Disk flexible structure with a super-elastic Nitinol core and stainless steel compressive springs.
+* **Backbone:** 10-Disk flexible structure utilizing 4 stainless steel rods to prevent twisting and maintain structural integrity, combined with compressive springs.
 * **Physical Dimensions:** Strictly 230.0 mm total resting length.
 * **Endoscopic Vision:** A micro-camera is mounted directly at the distal tip of the continuum backbone to provide real-time visual feedback, replicating a true clinical endoscope.
 * **Actuation:** 4-Tendon antagonistic routing system (exactly 5.0 mm routing radius) driven by high-precision NEMA-17 stepper motors.
@@ -70,7 +66,7 @@ Our team fully designed and manufactured the physical robot to validate our simu
 * **Simulated Endoscopic Vision:** A virtual camera sensor is attached to the tip of the digital twin, streaming real-time video that perfectly matches the hardware's perspective during navigation.
 * **Kinematics Solver:** A custom Python ROS 2 node implementing discrete Constant Curvature Inverse/Forward Kinematics to calculate exact tendon lengths and joint angles, preventing standard continuous-arc scaling errors.
 * **Interactive Dashboard:** A GUI for real-time task-space (XYZ) and joint-space operator control.
-* **Visualizer:** A custom node drawing the physical tendons and rods perfectly anchored to the base in RViz 2.
+* **Visualizer:** A custom node drawing the physical tendons and stainless steel rods perfectly anchored to the base in RViz 2.
 
 ---
 
