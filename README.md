@@ -34,20 +34,27 @@ This repository contains the software simulation, mathematical kinematics solver
 *The complete mechanical assembly designed in Autodesk Fusion 360, detailing the 10-disk backbone, exact 5.0 mm tendon routing channels, and the actuation base prior to physical manufacturing.*
 
 ### 2. The Physical Hardware Prototype
-![Hardware Demo](images/hardware_prototype_bending.gif)
-*Our physical 10-disk prototype bending. The system uses 4 stainless steel rods to prevent twisting (torsional deformation) along with compressive springs, actuated by NEMA-17 stepper motors.*
+![Hardware Demo](Images/hardware_prototype.png)
+*Our physical 10-disk prototype. The system uses 4 stainless steel rods to prevent twisting (torsional deformation) along with compressive springs, actuated by NEMA-17 stepper motors.*
 
 ### 3. ROS 2 & Gazebo Digital Twin (Anatomical Navigation)
-![Gazebo Simulation](images/gazebo_simulation.gif)
-*Real-time simulation in Gazebo Harmonic, driven by our custom Inverse Kinematics solver. We imported 3D meshes of a human trachea and bronchial tree, allowing us to insert the robot and perform complex clinical maneuvers to mimic reality and validate collision dynamics.*
+![Gazebo Simulation](Images/gazebo_simulation.png)
+*Simulation in Gazebo Harmonic, driven by our custom Inverse Kinematics solver. We imported 3D meshes of a human trachea and bronchial tree, allowing us to insert the robot and perform complex clinical maneuvers to mimic reality and validate collision dynamics.*
 
 ### 4. Interactive Operator Dashboard
 ![UI Dashboard](Images/Heidi%20hand.jpeg)
 *Our custom Tkinter GUI calculating discrete Constant Curvature tendon lengths (L1, L2, L3, L4) from Task-Space (XYZ) inputs.*
 
 ### 5. RViz 2 Holographic Tracking
-![RViz TF Tracking](images/rviz_tracking.gif)
-*Real-time validation of the continuum spline and tendon routing (5mm radius) using TF2 coordinate transformations.*
+![RViz TF Tracking](Images/rviz_tracking.png)
+*Validation of the continuum spline and tendon routing (5mm radius) using TF2 coordinate transformations.*
+
+---
+
+## 📄 Research Paper
+As part of this project, our team authored a comprehensive research paper detailing our mathematical modeling, anti-twist hardware design, and simulation architecture. 
+
+**You can read the full documentation and findings in the [`Paper/`](./Paper) folder of this repository.**
 
 ---
 
