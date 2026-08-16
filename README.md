@@ -86,3 +86,15 @@ rm -rf build/tendon_continuum install/tendon_continuum
 # 4. Build the package and source the overlay
 colcon build --packages-select tendon_continuum
 source install/setup.bash
+
+## Launching the System
+Once the workspace is built and sourced, launch the entire digital twin—including Gazebo, RViz 2, the custom TF broadcasters, and the Tkinter operator dashboard—with a single command:
+
+```bash
+ros2 launch tendon_continuum sim.launch.py
+```
+
+---
+
+## Mathematical Foundation
+Our Inverse Kinematics solver avoids standard rigid-link approximations in favor of exact discrete arc geometry based on established continuum robotics research. The tendon lengths ($L_1, L_2, L_3, L_4$) are calculated dynamically to account for the 10-disk physical configuration and the exact 5.0 mm routing offset, ensuring 1-to-1 parity between the digital commands and the physical hardware.
