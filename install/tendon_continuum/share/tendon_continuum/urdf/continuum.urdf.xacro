@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="tendon_continuum">
+
+    <material name="dark_grey"><color rgba="0.2 0.2 0.2 1.0"/></material>
+    <material name="nitinol_blue"><color rgba="0.1 0.2 0.5 1.0"/></material>
+    <material name="black_rod"><color rgba="0.05 0.05 0.05 1.0"/></material>
+
+    <link name="base_link">
+        <visual>
+            <geometry><box size="0.05 0.05 0.01"/></geometry>
+            <material name="dark_grey"/>
+        </visual>
+        <collision>
+            <geometry><box size="0.05 0.05 0.01"/></geometry>
+        </collision>
+        <inertial>
+            <mass value="0.5"/>
+            <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+        </inertial>
+    </link>
+
+    <xacro:macro name="continuum_segment" params="index parent">
+        
+        <joint name="pitch_joint_${index}" type="revolute">
+            <parent link="${parent}"/>
+            <child link="dummy_pitch_${index}"/>
+            <origin xyz="0 0 0.01" rpy="0 0 0"/> <axis xyz="0 1 0"/> 
+            <limit lower="-0.2" upper="0.2" effort="1.0" velocity="1.0"/>
+        </joint>
+        <link name="dummy_pitch_${index}">
+            <inertial><mass value="0.0001"/><inertia ixx="1e-7" ixy="0" ixz="0" iyy="1e-7" iyz="0" izz="1e-7"/></inertial>
+        </link>
+
+        <joint name="yaw_joint_${index}" type="revolute">
+            <parent link="dummy_pitch_${index}"/>
+            <child link="dummy_yaw_${index}"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <axis xyz="1 0 0"/> 
+            <limit lower="-0.2" upper="0.2" effort="1.0" velocity="1.0"/>
+        </joint>
+        <link name="dummy_yaw_${index}">
+            <inertial><mass value="0.0001"/><inertia ixx="1e-7" ixy="0" ixz="0" iyy="1e-7" iyz="0" izz="1e-7"/></inertial>
+        </link>
+
+        <joint name="contraction_joint_${index}" type="prismatic">
+            <parent link="dummy_yaw_${index}"/>
+            <child link="disk_${index}"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <axis xyz="0 0 1"/> 
+            <limit lower="-0.0046" upper="0.0" effort="10.0" velocity="1.0"/>
+        </joint>
+
+        <link name="disk_${index}">
+            <visual>
+                <geometry><cylinder radius="0.005" length="0.003"/></geometry>
+                <material name="nitinol_blue"/>
+            </visual>
+            <collision>
+                <geometry><cylinder radius="0.005" length="0.003"/></geometry>
+            </collision>
+            
+            <inertial>
+                <mass value="0.01"/>
+                <inertia ixx="1e-5" ixy="0" ixz="0" iyy="1e-5" iyz="0" izz="1e-5"/>
+            </inertial>
+        </link>
+
+    </xacro:macro>
+
+    <xacro:continuum_segment index="1" parent="base_link" />
+    <xacro:continuum_segment index="2" parent="disk_1" />
+    <xacro:continuum_segment index="3" parent="disk_2" />
+    <xacro:continuum_segment index="4" parent="disk_3" />
+    <xacro:continuum_segment index="5" parent="disk_4" />
+    <xacro:continuum_segment index="6" parent="disk_5" />
+    <xacro:continuum_segment index="7" parent="disk_6" />
+    <xacro:continuum_segment index="8" parent="disk_7" />
+    <xacro:continuum_segment index="9" parent="disk_8" />
+    <xacro:continuum_segment index="10" parent="disk_9" />
+
+</robot>

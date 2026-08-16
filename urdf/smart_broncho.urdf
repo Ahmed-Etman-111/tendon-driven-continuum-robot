@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<robot name="smart_broncho">
+
+    <gazebo>
+        <static>true</static>
+    </gazebo>
+
+    <link name="broncho_base_link">
+        <visual>
+            <origin xyz="-0.08 0.69 -0.15" rpy="2.94 0.21 0.00"/>
+            <geometry>
+                <mesh filename="package://tendon_continuum/meshes/Exterior.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+            <material name="lung_tissue">
+                <color rgba="0.5 0.1 0.1 1.0"/>
+            </material>
+        </visual>
+        
+        <collision>
+            <origin xyz="-0.08 0.69 -0.15" rpy="2.94 0.21 0.00"/>
+            <geometry>
+                <mesh filename="package://tendon_continuum/meshes/Exterior.stl" scale="0.003 0.003 0.003"/>
+            </geometry>
+        </collision>
+
+        <inertial>
+            <mass value="1.0"/>
+            <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+        </inertial>
+    </link>
+
+    <gazebo reference="broncho_base_link">
+        <material>
+            <ambient>0.5 0.1 0.1 1.0</ambient>
+            <diffuse>0.5 0.1 0.1 1.0</diffuse>
+            <specular>0.1 0.1 0.1 1.0</specular>
+        </material>
+    </gazebo>
+
+</robot>

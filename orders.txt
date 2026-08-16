@@ -1,0 +1,16 @@
+cd ~/ros2_ws
+rm -rf build/tendon_continuum install/tendon_continuum
+colcon build --packages-select tendon_continuum
+source install/setup.bash
+
+
+
+ros2 launch tendon_continuum sim.launch.py
+ros2 run tendon_continuum kinematics_solver.py
+ros2 run tendon_continuum dashboard_gui.py
+
+
+ros2 topic echo /tendon_lengths
+
+ros2 node list
+ros2 topic list

@@ -1,0 +1,11 @@
+source;share/tendon_continuum/hook/cmake_prefix_path.ps1
+source;share/tendon_continuum/hook/cmake_prefix_path.dsv
+source;share/tendon_continuum/hook/cmake_prefix_path.sh
+source;share/tendon_continuum/hook/pythonpath.ps1
+source;share/tendon_continuum/hook/pythonpath.dsv
+source;share/tendon_continuum/hook/pythonpath.sh
+source;share/tendon_continuum/local_setup.bash
+source;share/tendon_continuum/local_setup.dsv
+source;share/tendon_continuum/local_setup.ps1
+source;share/tendon_continuum/local_setup.sh
+source;share/tendon_continuum/local_setup.zsh

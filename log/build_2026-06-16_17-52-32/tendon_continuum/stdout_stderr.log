@@ -1,0 +1,78 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found rclpy: 7.1.11 (/opt/ros/jazzy/share/rclpy/cmake)
+-- Configuring done (2.9s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/omputor/ros2_ws/src/tendon_continuum/build/tendon_continuum
+Built target ament_cmake_python_copy_scripts
+running egg_info
+creating scripts.egg-info
+writing scripts.egg-info/PKG-INFO
+writing dependency_links to scripts.egg-info/dependency_links.txt
+writing top-level names to scripts.egg-info/top_level.txt
+writing manifest file 'scripts.egg-info/SOURCES.txt'
+reading manifest file 'scripts.egg-info/SOURCES.txt'
+writing manifest file 'scripts.egg-info/SOURCES.txt'
+Built target ament_cmake_python_build_scripts_egg
+-- Install configuration: ""
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/environment/pythonpath.sh
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/environment/pythonpath.dsv
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts-0.0.0-py3.12.egg-info
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts-0.0.0-py3.12.egg-info/top_level.txt
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts-0.0.0-py3.12.egg-info/PKG-INFO
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts-0.0.0-py3.12.egg-info/SOURCES.txt
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts-0.0.0-py3.12.egg-info/dependency_links.txt
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts/kinematics_solver.py
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts/tendon_controller.py
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts/rod_visualizer.py
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts/dashboard_gui.py
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts/__init__.py
+Listing '/home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts'...
+Compiling '/home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts/__init__.py'...
+Compiling '/home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts/dashboard_gui.py'...
+Compiling '/home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts/kinematics_solver.py'...
+Compiling '/home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts/rod_visualizer.py'...
+Compiling '/home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/python3.12/site-packages/scripts/tendon_controller.py'...
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/launch
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/launch/sim.launch.py
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/urdf
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/urdf/continuum.urdf.xacro
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/worlds
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/worlds/test_bench.sdf
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/config
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/config/controllers.yaml
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/meshes
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/meshes/base_plate.stl
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/meshes/disk.stl
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/tendon_continuum/kinematics_solver.py
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/tendon_continuum/tendon_controller.py
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/tendon_continuum/dashboard_gui.py
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/lib/tendon_continuum/rod_visualizer.py
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/ament_index/resource_index/package_run_dependencies/tendon_continuum
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/ament_index/resource_index/parent_prefix_path/tendon_continuum
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/environment/ament_prefix_path.sh
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/environment/ament_prefix_path.dsv
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/environment/path.sh
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/environment/path.dsv
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/local_setup.bash
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/local_setup.sh
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/local_setup.zsh
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/local_setup.dsv
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/package.dsv
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/ament_index/resource_index/packages/tendon_continuum
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/cmake/tendon_continuumConfig.cmake
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/cmake/tendon_continuumConfig-version.cmake
+-- Installing: /home/omputor/ros2_ws/src/tendon_continuum/install/tendon_continuum/share/tendon_continuum/package.xml
