@@ -15,7 +15,7 @@ This repository contains the software simulation, mathematical kinematics solver
 * **Heidi Hussain**
 * **Adham Khaled**
 
-**Project Advisor:** Assistant Professor [Mohamed Islam]
+**Project Advisor:** Assistant Professor Mohamed Islam
 
 # System Overview
 <p align="center">
