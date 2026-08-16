@@ -11,7 +11,7 @@ This repository contains the software simulation, mathematical kinematics solver
 
 ![System Overview]<p align="center">
   <img src="Images/gazebo_simulation_gui.png" width="45%" title="System Overview" />
-  <img src="Images/Heidi%20hand.jpeg" width="45%" title="Hardware Prototype" />
+  <img src="Images/IMG_20260627_190525.jpeg" width="45%" title="Hardware Prototype" />
 </p> 
 
 *<!-- Tip: Replace with your best Canva slide showing the whole project -->*
