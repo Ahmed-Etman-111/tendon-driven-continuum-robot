@@ -31,6 +31,8 @@ This repository contains the software simulation, mathematical kinematics solver
 
 ### 1. Fusion 360 CAD Design
 ![Fusion 360 Assembly](Images/Prototype.png)
+
+
 *The complete mechanical assembly designed in Autodesk Fusion 360, detailing the 10-disk backbone, exact 5.0 mm tendon routing channels, and the actuation base prior to physical manufacturing.*
 
 ### 2. The Physical Hardware Prototype
