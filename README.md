@@ -5,26 +5,53 @@
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 
 ## Overview
-This repository contains the software simulation and control architecture for a one-port tendon-driven continuum surgical robot. Developed as a graduation project by Team Four from the Systems and Biomedical Engineering department at Cairo University, this cyber-physical system bridges a physical nitinol-core prototype with a highly accurate digital twin.
+This repository contains the software simulation, mathematical kinematics solver, and hardware control architecture for a one-port tendon-driven continuum surgical robot. Developed as a graduation project by Team Four from the Systems and Biomedical Engineering department at Cairo University, this cyber-physical system bridges a physical nitinol-core prototype with a highly accurate digital twin.
 
 **Funding & Support:** This project was developed with support from ITIDA's ITAC funding program (2025–2026).
 
-![System Overview](images/your_canva_slide_image.png) *<!-- Replace with your slide image -->*
+![System Overview](images/main_presentation_slide.png) 
+*<!-- Tip: Replace with your best Canva slide showing the whole project -->*
+
+---
+
+## 🎥 Visual Demonstrations
+
+*We built this system from the ground up, from the physical manufacturing to the physics engine.*
+
+### 1. The Physical Hardware Prototype
+![Hardware Demo](images/hardware_prototype_bending.gif)
+*Our physical 10-disk prototype bending. The system uses a super-elastic Nitinol core and compressive springs, actuated by NEMA-17 stepper motors.*
+
+### 2. ROS 2 & Gazebo Digital Twin
+![Gazebo Simulation](images/gazebo_simulation.gif)
+*Real-time simulation in Gazebo Harmonic, driven by our custom Inverse Kinematics solver. The digital twin bends identically to the physical hardware.*
+
+### 3. Interactive Operator Dashboard
+![UI Dashboard](images/tkinter_dashboard.png)
+*Our custom Tkinter GUI calculating discrete Constant Curvature tendon lengths (L1, L2, L3, L4) from Task-Space (XYZ) inputs.*
+
+### 4. RViz 2 Holographic Tracking
+![RViz TF Tracking](images/rviz_tracking.gif)
+*Real-time validation of the continuum spline and tendon routing (5mm radius) using TF2 coordinate transformations.*
+
+---
 
 ## System Architecture
 
-The project is split into two perfectly synchronized domains:
+### 🛠️ Hardware (Physical Prototype)
+Our team fully designed and manufactured the physical robot to validate our simulation math:
+* **Backbone:** 10-Disk flexible structure with a super-elastic Nitinol core and stainless steel compressive springs.
+* **Physical Dimensions:** Strictly 230.0 mm total resting length.
+* **Actuation:** 4-Tendon antagonistic routing system (exactly 5.0 mm routing radius) driven by high-precision NEMA-17 stepper motors.
+* **Control Base:** Arduino-based microcontrollers handling low-level motor pulses, translating our Python solver's commands into physical tension.
 
-### 1. Hardware (Physical Prototype)
-* **Backbone:** 10-Disk flexible structure with a super-elastic Nitinol core and compressive springs (230 mm total length).
-* **Actuation:** 4-Tendon antagonistic routing system (5 mm routing radius) driven by NEMA-17 stepper motors.
-* **Control Base:** Arduino-based microcontrollers handling low-level motor pulses.
+### 💻 Software (Digital Twin & Control)
+* **Digital Twin:** A full physics simulation in Gazebo Harmonic featuring collision detection for anatomical environments.
+* **Kinematics Solver:** A custom Python ROS 2 node implementing discrete Constant Curvature Inverse/Forward Kinematics to calculate exact tendon lengths and joint angles, preventing standard continuous-arc scaling errors.
+* **Interactive Dashboard:** A GUI for real-time task-space (XYZ) and joint-space operator control.
+* **Visualizer:** A custom node drawing the physical tendons and rods perfectly anchored to the base in RViz 2.
 
-### 2. Software (Digital Twin & Control)
-* **Digital Twin:** A full physics simulation in Gazebo Harmonic featuring collision detection for anatomical environments (e.g., trachea meshes).
-* **Kinematics Solver:** A custom Python ROS 2 node implementing discrete Constant Curvature Inverse/Forward Kinematics to calculate exact tendon lengths and joint angles.
-* **Interactive Dashboard:** A Tkinter-based GUI for real-time task-space (XYZ) and joint-space operator control.
-* **RViz 2 Validation:** Real-time holographic rendering of the continuum spline using TF2 coordinate transformations.
+---
 
 ## Installation & Setup
 
@@ -37,7 +64,9 @@ The project is split into two perfectly synchronized domains:
 ```bash
 mkdir -p ~/ros2_ws/src
 cd ~/ros2_ws/src
-git clone [https://github.com/yourusername/smart-endoscopic-system.git](https://github.com/yourusername/smart-endoscopic-system.git)
+# Clone this repository
+git clone [https://github.com/Ahmed-Etman-111/tendon-driven-continuum-robot.git](https://github.com/Ahmed-Etman-111/tendon-driven-continuum-robot.git)
 cd ~/ros2_ws
+# Build the package
 colcon build --symlink-install
 source install/setup.bash
