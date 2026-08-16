@@ -25,7 +25,7 @@ This repository contains the software simulation, mathematical kinematics solver
 
 ---
 
-## 🎥 Visual Demonstrations
+## 🚀 System Highlights & Features
 
 *We built this system from the ground up, from the mechanical CAD design to the physical manufacturing and physics engine.*
 
@@ -34,20 +34,17 @@ This repository contains the software simulation, mathematical kinematics solver
 *The complete mechanical assembly designed in Autodesk Fusion 360, detailing the 10-disk backbone, exact 5.0 mm tendon routing channels, and the actuation base prior to physical manufacturing.*
 
 ### 2. The Physical Hardware Prototype
-![Hardware Demo](Images/hardware_prototype.png)
-*Our physical 10-disk prototype. The system uses 4 stainless steel rods to prevent twisting (torsional deformation) along with compressive springs, actuated by NEMA-17 stepper motors.*
+To ensure mechanical stability and precision, we manufactured a physical 10-disk prototype utilizing 4 stainless steel rods. This specific design choice successfully prevents torsional deformation (twisting) during operation, supported by compressive springs and actuated by NEMA-17 stepper motors. To fully replicate a true clinical endoscope, we integrated a micro-camera directly at the distal tip of the continuum backbone to provide real-time visual feedback to the operator.
 
 ### 3. ROS 2 & Gazebo Digital Twin (Anatomical Navigation)
-![Gazebo Simulation](Images/gazebo_simulation.png)
-*Simulation in Gazebo Harmonic, driven by our custom Inverse Kinematics solver. We imported 3D meshes of a human trachea and bronchial tree, allowing us to insert the robot and perform complex clinical maneuvers to mimic reality and validate collision dynamics.*
+We developed a highly accurate digital twin in Gazebo Harmonic, driven by our custom Inverse Kinematics solver. To rigorously test the system, we constructed a custom simulated environment by importing 3D meshes of a human trachea and bronchial tree. We inserted our digital robot into this anatomy to perform complex clinical maneuvers, mimicking reality and validating collision dynamics. Additionally, a simulated camera sensor is attached to the tip of the digital twin, streaming real-time video that perfectly matches the physical hardware's perspective.
 
 ### 4. Interactive Operator Dashboard
 ![UI Dashboard](Images/Heidi%20hand.jpeg)
 *Our custom Tkinter GUI calculating discrete Constant Curvature tendon lengths (L1, L2, L3, L4) from Task-Space (XYZ) inputs.*
 
 ### 5. RViz 2 Holographic Tracking
-![RViz TF Tracking](Images/rviz_tracking.png)
-*Validation of the continuum spline and tendon routing (5mm radius) using TF2 coordinate transformations.*
+To validate our control mathematics in real-time, we developed a visualization node using RViz 2. It utilizes TF2 coordinate transformations to render a real-time holographic projection of the continuum spline and tendon routing (5mm radius), ensuring the software's geometric calculations perfectly align with the hardware's physical state.
 
 ---
 
@@ -64,13 +61,13 @@ As part of this project, our team authored a comprehensive research paper detail
 Our team fully designed and manufactured the physical robot to validate our simulation math:
 * **Backbone:** 10-Disk flexible structure utilizing 4 stainless steel rods to prevent twisting and maintain structural integrity, combined with compressive springs.
 * **Physical Dimensions:** Strictly 230.0 mm total resting length.
-* **Endoscopic Vision:** A micro-camera is mounted directly at the distal tip of the continuum backbone to provide real-time visual feedback, replicating a true clinical endoscope.
+* **Endoscopic Vision:** A micro-camera is mounted directly at the distal tip of the continuum backbone.
 * **Actuation:** 4-Tendon antagonistic routing system (exactly 5.0 mm routing radius) driven by high-precision NEMA-17 stepper motors.
 * **Control Base:** Arduino-based microcontrollers handling low-level motor pulses, translating our Python solver's commands into physical tension.
 
 ### 💻 Software (Digital Twin & Control)
 * **Anatomical Environment:** A full physics simulation in Gazebo Harmonic featuring realistic human trachea and bronchi meshes for environmental collision and maneuver testing.
-* **Simulated Endoscopic Vision:** A virtual camera sensor is attached to the tip of the digital twin, streaming real-time video that perfectly matches the hardware's perspective during navigation.
+* **Simulated Endoscopic Vision:** A virtual camera sensor on the tip of the digital twin.
 * **Kinematics Solver:** A custom Python ROS 2 node implementing discrete Constant Curvature Inverse/Forward Kinematics to calculate exact tendon lengths and joint angles, preventing standard continuous-arc scaling errors.
 * **Interactive Dashboard:** A GUI for real-time task-space (XYZ) and joint-space operator control.
 * **Visualizer:** A custom node drawing the physical tendons and stainless steel rods perfectly anchored to the base in RViz 2.
