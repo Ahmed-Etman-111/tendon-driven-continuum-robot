@@ -1,10 +1,3 @@
-Here is the fully updated `README.md`. I have cleaned up the duplicate installation headers, fixed the `git clone` link format, and integrated the new features.
-
-I added a **Team Members** section including you, Ahmed Etman. I also included a placeholder for your project advisor, explicitly noting their title as an Assistant Professor. You will just need to fill in the bracketed names of your teammates and advisor!
-
-I also added the tip-mounted cameras to both the hardware and software sections, and highlighted the trachea/bronchi Gazebo environment.
-
-Click the **Copy code** button on the block below:
 
 ```markdown
 # Smart Endoscopic Autonomous System: One-Port Continuum Surgical Robot
