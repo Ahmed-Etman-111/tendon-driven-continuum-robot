@@ -32,7 +32,7 @@ This repository contains the software simulation, mathematical kinematics solver
 *Real-time simulation in Gazebo Harmonic, driven by our custom Inverse Kinematics solver. The digital twin bends identically to the physical hardware.*
 
 ### 3. Interactive Operator Dashboard
-![UI Dashboard](Heidi%20hand.jpeg)
+![UI Dashboard](Images/Heidi%20hand.jpeg)
 *Our custom Tkinter GUI calculating discrete Constant Curvature tendon lengths (L1, L2, L3, L4) from Task-Space (XYZ) inputs.*
 
 ### 4. RViz 2 Holographic Tracking
