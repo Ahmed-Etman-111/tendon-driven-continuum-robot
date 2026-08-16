@@ -11,9 +11,9 @@ This repository contains the software simulation, mathematical kinematics solver
 
 ## Team Members
 * **Ahmed Etman**
-* **[Team Member 2 Name]**
-* **[Team Member 3 Name]**
-* **[Team Member 4 Name]**
+* **Ziad Mohamed**
+* **Heidi Hussain**
+* **Adham Khaled**
 
 **Project Advisor:** Assistant Professor [Advisor Name]
 
@@ -43,6 +43,8 @@ This repository contains the software simulation, mathematical kinematics solver
 
 ### 4. Interactive Operator Dashboard
 ![UI Dashboard](Images/Heidi%20hand.jpeg)
+
+
 *Our custom Tkinter GUI calculating discrete Constant Curvature tendon lengths (L1, L2, L3, L4) from Task-Space (XYZ) inputs.*
 
 ### 5. RViz 2 Holographic Tracking
@@ -110,5 +112,3 @@ ros2 launch tendon_continuum sim.launch.py
 
 ## Mathematical Foundation
 Our Inverse Kinematics solver avoids standard rigid-link approximations in favor of exact discrete arc geometry based on established continuum robotics research. The tendon lengths ($L_1, L_2, L_3, L_4$) are calculated dynamically to account for the 10-disk physical configuration and the exact 5.0 mm routing offset, ensuring 1-to-1 parity between the digital commands and the physical hardware.
-
-```
