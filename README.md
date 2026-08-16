@@ -1,4 +1,4 @@
-# Smart Endoscopic Autonomous System: One-Port Continuum Surgical Robot
+# One-Port Continuum Surgical Robot
 
 [![ROS 2](https://img.shields.io/badge/ROS_2-Jazzy-blue.svg)](https://docs.ros.org/en/jazzy/)
 [![Gazebo](https://img.shields.io/badge/Gazebo-Harmonic-orange.svg)](https://gazebosim.org/)
